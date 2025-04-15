@@ -27,6 +27,28 @@
 - ✅ Started this **journal** to track daily development and thoughts.
 - 🧠 *Learned*: Entity mapping with JPA, smart use of Lombok, and importance of keeping database and code structure in sync.
 
+
+## 🗓️ April 13, 2025
+- ✅ **Defined  `BankRepository` interface** that extends `JpaRepository` interface which helped to perfom `CRUD` operations.
+- ✅ **Created a `BankService ` class** that utilizes `BankRepository` to perform listed opearations below by methods:
+  - `getBankDetails()` method to retrieve data about bank's headquarter and their related branches.
+  - `getSwiftCodesByCountryISO2()` method to retrieve given country's bank details such as address swiftcodes , headquarter.
+  - `addSwiftCode()` method to add banks to our database handles few edge cases.
+
+
+## 🗓️ April 14, 2025
+- ✅ **Created a class `BankController`** which is a `RestController Class` that will handle following endpoints:
+  - **Endpoint 1:** `GET: /v1/swift-codes/{swift-code}`
+  - **Endpoint 2:** `GET: /v1/swift-codes/country/{countryISO2code}`
+  - **Endpoint 3:** `POST: /v1/swift-codes`
+- ✅  **Added `Swagger` to dependencies** to visualize the process.
+
+
+
+## 🗓️ April 15, 2025(IN PROGRESS)
+- **Planning to handle `Exceptions`** by using `Global Exception Handler`
+- **Thinking about possible edge cases,errors and solutions**
+  
 ---
 
 > More to come. This journal helps track the journey and reflect on progress step-by-step.

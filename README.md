@@ -51,8 +51,59 @@ Tests use an in-memory H2 database,  ensuring actual PostgreSQL database remains
 You can explore the endpoints via Swagger UI at:
 http://localhost:8080/swagger-ui.html
 
-## 🐳 Dockerization
-- In progress...
+# 🐳 Dockerization Guide
+
+This project is containerized using Docker and Docker Compose. It includes:
+
+- ✅ Java Spring Boot App container  
+- ✅ PostgreSQL Database container
+
+---
+
+## 🧱 1. Build and Run Containers
+
+```bash
+docker-compose up --build
+```
+This will:
+
+Build the Spring Boot app image.
+
+Start the app and PostgreSQL containers.
+
+Bind API to localhost:8080 and DB to localhost:5432.
+
+##🔗 2. Access the Application
+API Root: http://localhost:8080
+
+Swagger UI (if enabled): http://localhost:8080/swagger-ui.html
+
+
+
+## 🛠️ 3. Database Configuration
+The docker-compose.yml sets the following DB credentials:
+```env
+POSTGRES_DB=myswift
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=123456
+```
+Spring Boot connects using:
+```properties
+spring.datasource.url=jdbc:postgresql://db:5432/myswift
+```
+db is the hostname of the PostgreSQL container in the same Docker network.
+
+## 🧹 4. Stop & Clean Up
+To stop containers:
+```bash
+docker-compose down
+```
+To remove volumes and clean all data:
+```bash
+docker-compose down -v
+```
+
+
 
 
 ## 📌 Notes

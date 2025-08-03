@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+### Credentials ###
+src/main/resources/env.properties

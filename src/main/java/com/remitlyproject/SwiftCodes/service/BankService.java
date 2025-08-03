@@ -89,7 +89,7 @@ public class BankService {
             swiftList.add(swifts);
         }
         // Note!!: Initially ive used hashmap then I realized it is not considering the order  I put values in the HashMap
-        // Then switched LinkedHashMap that ill consider order I 'put' values.
+        // Then switched LinkedHashMap that will consider order I 'put' values.
 
         // putting data according to instructions
         responseBody.put("countryISO2", bank.getCountryISO2());
